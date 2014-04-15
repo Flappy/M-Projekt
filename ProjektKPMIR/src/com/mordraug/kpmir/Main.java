@@ -29,7 +29,7 @@ public class Main {
 		
 		MathElement[][] m=manip.getEffectorPos();
 		//System.out.println(Math.cos(Math.toRadians(90)));
-		printMatrix(m,true);
+		//printMatrix(m,true);
 		//MathElement[][] m1 = {{new MathVar(1),new MathVar(0),new MathVar(2)},{new MathVar(-1),new MathVar(3),new MathVar(1)}};
 		//MathElement[][] m2 = {{new MathVar(3),new MathVar(1)},{new MathVar(2),new MathVar(1)},{new MathVar(1),new MathVar(0)}};
 		//printMatrix(Matrix.multiply(m1,m2));

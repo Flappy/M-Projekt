@@ -7,7 +7,8 @@ import com.jogamp.common.nio.Buffers;
 
 public class Cylinder extends DrawableElement {
 
-	public Cylinder(int segments) {
+	public Cylinder(int segments, double height) {
+		quads = true;
 		v_array = new double[segments * 2][3];
 		i_array = new int[4 * segments];
 		for (int i = 0; i < segments; i++) {
@@ -19,7 +20,7 @@ public class Cylinder extends DrawableElement {
 			v_array[i*2][2]=0;
 			v_array[i*2+1][0]=x;
 			v_array[i*2+1][1]=y;
-			v_array[i*2+1][2]=1;
+			v_array[i*2+1][2]=height;
 			i_array[i*4]=i*2;
 			i_array[i*4+1]=i*2+1;
 			i_array[i*4+2]=i*2+3;

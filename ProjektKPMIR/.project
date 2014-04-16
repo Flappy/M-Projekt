@@ -14,4 +14,16 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>lib/gluegen-rt.jar</name>
+			<type>1</type>
+			<location>C:/KPMiR/jogamp-all-platforms/jar/gluegen-rt.jar</location>
+		</link>
+		<link>
+			<name>lib/jogl-all.jar</name>
+			<type>1</type>
+			<location>C:/KPMiR/jogamp-all-platforms/jar/jogl-all.jar</location>
+		</link>
+	</linkedResources>
 </projectDescription>

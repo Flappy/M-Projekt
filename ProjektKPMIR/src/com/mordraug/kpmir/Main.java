@@ -2,6 +2,7 @@ package com.mordraug.kpmir;
 
 import com.mordraug.kpmir.dh.Joint;
 import com.mordraug.kpmir.dh.Manipulator;
+import com.mordraug.kpmir.gui.GUI;
 import com.mordraug.kpmir.math.MathElement;
 import com.mordraug.kpmir.math.Shortener;
 
@@ -33,8 +34,7 @@ public class Main {
 		//MathElement[][] m1 = {{new MathVar(1),new MathVar(0),new MathVar(2)},{new MathVar(-1),new MathVar(3),new MathVar(1)}};
 		//MathElement[][] m2 = {{new MathVar(3),new MathVar(1)},{new MathVar(2),new MathVar(1)},{new MathVar(1),new MathVar(0)}};
 		//printMatrix(Matrix.multiply(m1,m2));
-		
-		
+		new GUI();
 	}
 	
 	public static void printMatrix(MathElement[][] matrix){

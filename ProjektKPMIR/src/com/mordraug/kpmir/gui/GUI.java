@@ -16,6 +16,7 @@ import javax.swing.JPanel;
 public class GUI {
 	private final GLCanvas glcanvas;
 	private final Frame frame;
+	public final SceneManager scene = new SceneManager();
 	
 	public GUI(){
 		frame = new Frame("M-Project");
@@ -39,7 +40,7 @@ public class GUI {
             
             @Override
             public void display( GLAutoDrawable glautodrawable ) {
-                GLRender.render( glautodrawable.getGL().getGL2(), glautodrawable.getWidth(), glautodrawable.getHeight() );
+                GLRender.render( glautodrawable.getGL().getGL2(), glautodrawable.getWidth(), glautodrawable.getHeight(), scene );
             }
         });
 		

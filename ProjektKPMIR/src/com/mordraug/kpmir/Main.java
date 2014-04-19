@@ -2,13 +2,17 @@ package com.mordraug.kpmir;
 
 import com.mordraug.kpmir.dh.Joint;
 import com.mordraug.kpmir.dh.Manipulator;
+import com.mordraug.kpmir.gui.Cone;
 import com.mordraug.kpmir.gui.GUI;
+import com.mordraug.kpmir.gui.Line;
+import com.mordraug.kpmir.gui.SceneProp;
 import com.mordraug.kpmir.math.MathElement;
 import com.mordraug.kpmir.math.Shortener;
 
 public class Main {
 	public static boolean shorten = false;
 	public static boolean radians = false;
+	public static GUI gui;
 	
 	public static void main(String[] args){
 		Manipulator manip = new Manipulator();
@@ -34,7 +38,11 @@ public class Main {
 		//MathElement[][] m1 = {{new MathVar(1),new MathVar(0),new MathVar(2)},{new MathVar(-1),new MathVar(3),new MathVar(1)}};
 		//MathElement[][] m2 = {{new MathVar(3),new MathVar(1)},{new MathVar(2),new MathVar(1)},{new MathVar(1),new MathVar(0)}};
 		//printMatrix(Matrix.multiply(m1,m2));
-		new GUI();
+		gui = new GUI();
+		gui.scene.add(new SceneProp(new Cone(5,3)));
+		SceneProp line = new SceneProp(new Line());
+		line.setPos(5, 5, 0);
+		gui.scene.add(line);
 	}
 	
 	public static void printMatrix(MathElement[][] matrix){

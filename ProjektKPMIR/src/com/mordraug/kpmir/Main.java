@@ -19,14 +19,17 @@ public class Main {
 		manip.addJoint(new Joint(90,0.30,0,-90, 1));
 		manip.addJoint(new Joint(0,0,5,0, 1));
 		manip.addJoint(new Joint(0,0,5,0, 1));
+		
 		//manip.addJoint(new Joint(0,0,0,Math.toRadians(-90),1));
 		//manip.addJoint(new Joint(0,0,0,0,1));
-		manip.setTrans(0, Math.toRadians(1));
+		
+		manip.setTrans(0, Math.toRadians(0));
 		manip.setTransName(0, "r1");
-		manip.setTrans(1, Math.toRadians(1));
+		manip.setTrans(1, Math.toRadians(0));
 		manip.setTransName(1, "r2");
-		manip.setTrans(2, Math.toRadians(1));
+		manip.setTrans(2, Math.toRadians(0));
 		manip.setTransName(2, "r3");
+		
 		/*manip.setTrans(3,Math.toRadians(1));
 		manip.setTransName(3,"r4");
 		manip.setTrans(4,Math.toRadians(1));
@@ -34,15 +37,18 @@ public class Main {
 		
 		MathElement[][] m=manip.getEffectorPos();
 		//System.out.println(Math.cos(Math.toRadians(90)));
-		//printMatrix(m,true);
+		printMatrix(m,true);
 		//MathElement[][] m1 = {{new MathVar(1),new MathVar(0),new MathVar(2)},{new MathVar(-1),new MathVar(3),new MathVar(1)}};
 		//MathElement[][] m2 = {{new MathVar(3),new MathVar(1)},{new MathVar(2),new MathVar(1)},{new MathVar(1),new MathVar(0)}};
 		//printMatrix(Matrix.multiply(m1,m2));
+		
 		gui = new GUI();
-		gui.scene.add(new SceneProp(new Cone(5,3)));
+		gui.scene=manip.createScene();
+		
+		/*gui.scene.add(new SceneProp(new Cone(5,3)));
 		SceneProp line = new SceneProp(new Line());
 		line.setPos(5, 5, 0);
-		gui.scene.add(line);
+		gui.scene.add(line);*/
 	}
 	
 	public static void printMatrix(MathElement[][] matrix){

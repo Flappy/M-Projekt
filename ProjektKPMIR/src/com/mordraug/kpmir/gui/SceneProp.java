@@ -3,7 +3,7 @@ package com.mordraug.kpmir.gui;
 import javax.media.opengl.GL2;
 
 public class SceneProp {
-	private DrawableElement drawable;
+	public DrawableElement drawable;
 	private double[] position = new double[3];
 	private double[] rotation = new double[3];
 	

@@ -15,7 +15,7 @@ public class GLRender {
 		// coordinate system origin at lower left with width and height same as
 		// the window
 		GLU glu = new GLU();
-		gl2.glOrtho(0.0f, 10 * ((double) width / height), 0.0f, 10, -10, 10);
+		gl2.glOrtho(0.0f, 15 * ((double) width / height), 0.0f, 15, -10, 10);
 
 		gl2.glMatrixMode(GL2.GL_MODELVIEW);
 		gl2.glLoadIdentity();

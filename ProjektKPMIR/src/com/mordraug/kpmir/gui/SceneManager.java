@@ -20,7 +20,7 @@ public class SceneManager {
 	}
 	
 	public void draw(GL2 gl, int width, int height){
-		//gl.glTranslatef(5, 5, 0);
+		gl.glTranslatef(5, 5, 0);
 		for(SceneProp prop: props){
 			prop.draw(gl);
 		}

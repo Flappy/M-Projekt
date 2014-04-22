@@ -4,19 +4,22 @@ import com.jogamp.common.nio.Buffers;
 
 public class Cone extends DrawableElement {
 	
-	public Cone(int segments, double height){
+	public Cone(int segments, double height, double length, double width){
+		this.height=height;
+		this.length=length;
+		this.width=width;
 		v_array = new double[segments+1][3];
 		i_array = new int[3*segments];
 		v_array[0][0] = 0;
-		v_array[0][1] = 0;
-		v_array[0][2] = height;
+		v_array[0][1] = height;
+		v_array[0][2] = 0;
 		for (int i = 0; i < segments; i++) {
 			double angle = (Math.PI*2)/segments*i;
-			double x = Math.cos(angle);
-			double y = Math.sin(angle);
+			double x = Math.cos(angle)*length;
+			double y = Math.sin(angle)*width;
 			v_array[1+i][0]=x;
-			v_array[1+i][1]=y;
-			v_array[1+i][2]=0;
+			v_array[1+i][1]=0;
+			v_array[1+i][2]=y;
 			i_array[i*3]=0;
 			i_array[i*3+1]=i+1;
 			i_array[i*3+2]=i+2;

@@ -7,20 +7,23 @@ import com.jogamp.common.nio.Buffers;
 
 public class Cylinder extends DrawableElement {
 
-	public Cylinder(int segments, double height) {
+	public Cylinder(int segments, double height, double length, double width){
+		this.height=height;
+		this.length=length;
+		this.width=width;
 		quads = true;
 		v_array = new double[segments * 2][3];
 		i_array = new int[4 * segments];
 		for (int i = 0; i < segments; i++) {
 			double angle = (Math.PI*2)/segments*i;
-			double x = Math.cos(angle);
-			double y = Math.sin(angle);
+			double x = Math.cos(angle)*length;
+			double y = Math.sin(angle)*width;
 			v_array[i*2][0]=x;
-			v_array[i*2][1]=y;
-			v_array[i*2][2]=0;
+			v_array[i*2][1]=0;
+			v_array[i*2][2]=y;
 			v_array[i*2+1][0]=x;
-			v_array[i*2+1][1]=y;
-			v_array[i*2+1][2]=height;
+			v_array[i*2+1][1]=height;
+			v_array[i*2+1][2]=y;
 			i_array[i*4]=i*2;
 			i_array[i*4+1]=i*2+1;
 			i_array[i*4+2]=i*2+3;

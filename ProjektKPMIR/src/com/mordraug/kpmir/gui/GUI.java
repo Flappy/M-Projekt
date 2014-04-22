@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 public class GUI {
 	private final GLCanvas glcanvas;
 	private final Frame frame;
-	public final SceneManager scene = new SceneManager();
+	public SceneManager scene = new SceneManager();
 	
 	public GUI(){
 		frame = new Frame("M-Project");

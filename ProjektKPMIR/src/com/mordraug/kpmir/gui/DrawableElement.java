@@ -12,6 +12,7 @@ public class DrawableElement {
 	public DoubleBuffer v_buff;
 	public IntBuffer i_buff;
 	public boolean quads = false;
+	public double height,length,width;
 	
 	public void draw(GL2 gl2){
 		gl2.glVertexPointer(3, GL2.GL_DOUBLE, 0, v_buff);
